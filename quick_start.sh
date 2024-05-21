@@ -10,6 +10,8 @@ echo "unzipping rockyou"
 sudo gunzip /usr/share/wordlists/rockyou.txt.gz
 echo "installing rlwrap"
 sudo apt install rlwrap -y
+echo "installing dirsearch"
+sudo apt install dirsearch -y
 echo "installing gnome, please pick gdm3"
 sudo apt install kali-desktop-gnome -y
 echo "installing neo4j, remember to go to localhost:7474 and change password"
