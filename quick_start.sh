@@ -2,6 +2,10 @@
 
 sudo apt update -y
 sudo apt upgrade -y
+echo "installing pipx"
+sudo apt install pipx -y
+echo "pipx ensurepath"
+pipx ensurepath
 echo "unzipping rockyou"
 sudo gunzip /usr/share/wordlists/rockyou.txt.gz
 echo "installing rlwrap"
@@ -24,8 +28,6 @@ wget https://github.com/RustScan/RustScan/releases/download/1.10.0/rustscan_1.10
 sudo dpkg -i rustscan_1.10.0_amd64.deb
 echo "uninstalling crackmapexec"
 sudo apt remove crackmapexec -y
-echo "installing pipx"
-sudo apt install pipx -y
 echo "installing netexec with pipx"
 git clone https://github.com/Pennyw0rth/NetExec.git
 cd netexec
@@ -79,8 +81,6 @@ sudo cp msada_guids.py /usr/lib/python3/dist-packages/impacket/
 sudo cp msada_guids.py /usr/lib/python3/dist-packages/scapy/layers/
 echo "installing kerbrute"
 pipx install kerbrute
-echo "pipx ensurepath"
-pipx ensurepath
 pipx completions
 echo "Trebds and Chance... take note..."
 sudo apt install keepassxc -y
