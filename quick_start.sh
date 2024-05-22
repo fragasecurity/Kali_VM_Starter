@@ -6,6 +6,12 @@ echo "installing pipx"
 sudo apt install pipx -y
 echo "pipx ensurepath"
 pipx ensurepath
+echo "uninstalling crackmapexec"
+sudo apt remove crackmapexec -y
+echo "installing netexec with pipx"
+git clone https://github.com/Pennyw0rth/NetExec.git
+cd netexec
+pipx install . -y
 echo "unzipping rockyou"
 sudo gunzip /usr/share/wordlists/rockyou.txt.gz
 echo "installing rlwrap"
@@ -28,12 +34,6 @@ sudo apt-get install sublime-text -y
 echo "installing rustscan"
 wget https://github.com/RustScan/RustScan/releases/download/1.10.0/rustscan_1.10.0_amd64.deb
 sudo dpkg -i rustscan_1.10.0_amd64.deb
-echo "uninstalling crackmapexec"
-sudo apt remove crackmapexec -y
-echo "installing netexec with pipx"
-git clone https://github.com/Pennyw0rth/NetExec.git
-cd netexec
-pipx install . -y
 echo "installing terminator"
 sudo apt install terminator -y
 echo "putting crackeverything into /home/kali/.local/bin"
