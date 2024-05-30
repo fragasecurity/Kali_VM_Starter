@@ -1,11 +1,14 @@
 !#/bin/bash
 
 sudo apt update -y
-sudo apt upgrade -y
+
+sudo apt install seclists curl dnsrecon enum4linux feroxbuster gobuster impacket-scripts nbtscan nikto nmap onesixtyone oscanner redis-tools smbclient smbmap snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf -y
+
 echo "installing pipx"
 sudo apt install pipx -y
-echo "pipx ensurepath"
-pipx ensurepath
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+
 echo "uninstalling crackmapexec"
 sudo apt remove crackmapexec -y
 echo "installing netexec with pipx"
@@ -93,6 +96,5 @@ firefox https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/
 firefox https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/
 echo "installing golang"
 sudo apt install golang-go -y
-echo "running nxc for the first time"
-nxc --version
+
 echo "Finished. Restart Kali."
