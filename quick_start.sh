@@ -9,6 +9,10 @@ sudo apt install pipx -y
 python3 -m pip install --user pipx
 python3 -m pipx ensurepath
 
+mkdir Transfer
+cd Transfer
+git clone https://github.com/fragasecurity/Tools.git
+
 echo "uninstalling crackmapexec"
 sudo apt remove crackmapexec -y
 
