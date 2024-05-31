@@ -12,6 +12,7 @@ python3 -m pipx ensurepath
 mkdir Transfer
 cd Transfer
 git clone https://github.com/fragasecurity/Tools.git
+git clone https://github.com/fragasecurity/Scripts.git
 
 echo "uninstalling crackmapexec"
 sudo apt remove crackmapexec -y
