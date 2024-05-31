@@ -11,10 +11,12 @@ python3 -m pipx ensurepath
 
 echo "uninstalling crackmapexec"
 sudo apt remove crackmapexec -y
+
 echo "installing netexec with pipx"
-git clone https://github.com/Pennyw0rth/NetExec.git
-cd netexec
-pipx install . -y
+sudo apt install pipx git -y
+pipx ensurepath
+pipx install git+https://github.com/Pennyw0rth/NetExec
+
 echo "unzipping rockyou"
 sudo gunzip /usr/share/wordlists/rockyou.txt.gz
 echo "installing rlwrap"
